@@ -51,6 +51,7 @@ const travelMap = {
   "Thái Lan":   { type: "country", places: ["Bangkok", "Chiang Mai", "Phuket"] },
   "Trung Quốc": { type: "country", places: ["Bắc Kinh", "Thượng Hải", "Tô Châu"] },
   "Mông Cổ":    { type: "country", places: ["Ulaanbaatar", "Terelj", "Turtle Rock", "Hustai"] },
+  "Maldives": { type: "country", places: ["Male", "Maafushi", "Addu City"] },
   "Philippines":{ type: "country", places: ["Manila", "Cebu", "Palawan"] },
   "Myanmar":    { type: "country", places: ["Yangon", "Mandalay", "Bagan"] },
   "Châu Âu":    { type: "country", places: ["Paris", "Rome", "Prague"] },
