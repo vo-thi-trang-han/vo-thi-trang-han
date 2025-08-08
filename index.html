@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Võ Thị Trang Hân</title>
+  <meta name="description" content="Viết để gìn giữ điều chân thật. Website cá nhân của Võ Thị Trang Hân.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --accent: #14b8a6; } /* teal-500 */
+    .pastel-hero { background: linear-gradient(135deg,#ffe4e6, #fef9c3, #dbeafe); }
+    .h-serif { font-family: 'Playfair Display', serif; }
+    .body-sans { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen text-neutral-900 bg-neutral-50 body-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="inline-block h-5 w-5 rounded-full" style="background:var(--accent)"></span>
+        <span class="font-semibold">Võ Thị Trang Hân</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:opacity-70">Giới thiệu</a>
+        <a href="#writings" class="hover:opacity-70">Bài viết</a>
+        <a href="#salon" class="hover:opacity-70">Salon trà chiều</a>
+        <a href="#travel" class="hover:opacity-70">Du ký</a>
+        <a href="#media" class="hover:opacity-70">Video</a>
+        <a href="#contact" class="hover:opacity-70">Liên hệ</a>
+      </nav>
+      <button class="md:hidden border px-3 py-1 rounded-lg">Menu</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pastel-hero">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="h-serif text-3xl md:text-5xl font-semibold leading-tight">Viết để gìn giữ điều chân thật.</h1>
+        <p class="mt-4 text-neutral-700 md:text-lg">Không chạy theo thị hiếu. Không đánh lừa cảm xúc. Chỉ kể những điều đã sống, đã thấy, đã nghĩ.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#writings" class="px-6 py-2 rounded-2xl text-white" style="background:var(--accent)">Đọc bài mới</a>
+          <a href="#travel" class="px-6 py-2 rounded-2xl border">Vào Du ký</a>
+        </div>
+      </div>
+      <div class="rounded-3xl p-8 shadow-sm bg-gradient-to-br from-teal-100 to-emerald-100">
+        <div class="text-2xl">❝</div>
+        <p class="mt-2 text-lg italic">“Nhân bất thập toàn — mà ai cũng mong điều toàn vẹn. Viết là cách tôi làm bạn với phần chưa đủ của mình.”</p>
+        <div class="mt-4 text-sm text-neutral-600">Văn hoài niệm, dí dỏm, nhưng không hời hợt.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto"><hr class="border-neutral-200"></div>
+
+  <!-- Writings -->
+  <section id="writings" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-center justify-between">
+      <h2 class="h-serif text-2xl md:text-3xl">Bài viết nổi bật</h2>
+      <a href="#" class="text-sm hover:opacity-70">Xem tất cả</a>
+    </div>
+
+    <div id="categoryFilter" class="flex gap-2 mb-6 mt-4 flex-wrap"></div>
+
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="postGrid"></div>
+  </section>
+
+  <div class="max-w-6xl mx-auto"><hr class="border-neutral-200"></div>
+
+  <!-- Travel -->
+  <section id="travel" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-center justify-between">
+      <h2 class="h-serif text-2xl md:text-3xl">Du ký</h2>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Sidebar Filters -->
+      <aside class="lg:col-span-4 xl:col-span-3 border rounded-2xl p-4 bg-white">
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm text-neutral-600 mb-1">Cấp 1 – Quốc gia</label>
+            <select id="countrySelect" class="w-full border rounded-xl px-3 py-2"></select>
+          </div>
+          <div>
+            <label class="block text-sm text-neutral-600 mb-1">Cấp 2 – Miền (Việt Nam)</label>
+            <select id="regionSelect" class="w-full border rounded-xl px-3 py-2" disabled></select>
+          </div>
+          <div>
+            <label class="block text-sm text-neutral-600 mb-1">Cấp 3 – Địa danh</label>
+            <select id="placeSelect" class="w-full border rounded-xl px-3 py-2" disabled></select>
+          </div>
+          <div id="breadcrumb" class="text-xs text-neutral-500"></div>
+        </div>
+      </aside>
+
+      <!-- Travel list -->
+      <div class="lg:col-span-8 xl:col-span-9">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6" id="travelList"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto"><hr class="border-neutral-200"></div>
+
+  <!-- Salon & Media placeholders -->
+  <section id="salon" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="h-serif text-2xl md:text-3xl">Salon trà chiều</h2>
+    <p class="mt-2 text-neutral-600">Không gian chuyện trò nhẹ nhàng — sẽ khai trương sau khi hoàn thiện nền tảng.</p>
+  </section>
+
+  <section id="media" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="h-serif text-2xl md:text-3xl">Video</h2>
+    <p class="mt-2 text-neutral-600">Kho video sẽ bổ sung trong đợt tiếp theo.</p>
+  </section>
+
+  <div class="max-w-6xl mx-auto"><hr class="border-neutral-200"></div>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="h-serif text-2xl md:text-3xl">Liên hệ</h2>
+    <p class="mt-4 text-neutral-700">Email: <a class="underline" href="mailto:tranghanvtt1102@gmail.com">tranghanvtt1102@gmail.com</a></p>
+  </section>
+
+  <footer class="border-t">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-neutral-500 flex flex-col md:flex-row items-center justify-between gap-2">
+      <span>© <span id="year"></span> Võ Thị Trang Hân.</span>
+      <a class="text-xs underline" href="#top">Lên đầu trang</a>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>

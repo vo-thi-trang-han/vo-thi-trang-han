@@ -1,16 +1,17 @@
-## Hi there 👋
+# Võ Thị Trang Hân – Má Jou
 
-<!--
-**vo-thi-trang-han/vo-thi-trang-han** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🌸 Chào mừng bạn đến với trang web cá nhân của tôi – nơi lưu giữ những bài du ký, tản văn và ghi chép đời sống.
 
-Here are some ideas to get you started:
+## ✍️ Nội dung trên web
+- **Du ký**: Hành trình qua nhiều vùng đất, từ biển xa Maldives đến thảo nguyên Mông Cổ.
+- **Tản văn**: Chút nhẹ nhàng, chút hài hước, chút triết lý từ chuyện đời thường.
+- **Ghi chép**: Những khoảnh khắc và chi tiết đời sống, được viết lại như chính tôi cảm nhận.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🛠 Công nghệ
+Trang web được xây dựng bằng **Hugo** và triển khai trên **Netlify**.
+
+## 🌐 Xem web
+[https://vo-thi-trang-han.netlify.app](https://vo-thi-trang-han.netlify.app)
+
+---
+*“Có đến mới biết, có biết mới hiểu, có hiểu mới thương, có thương mới mở lòng.”*
